@@ -94,7 +94,9 @@ nav.navbar.scrolled {
   background-color: #121212;
 }
 nav.navbar a.navbar-brand { /*Anchura del lofo*/
-    width: 12%;
+    font-size: 30px;
+    font-weight: 700;
+    width: 20%;
     color: rgb(117, 32, 245);
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
