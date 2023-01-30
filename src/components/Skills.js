@@ -1,5 +1,6 @@
 import React from "react";
-import {Carousel} from "react-multi-carousel";
+import "../style2.css";
+import Carousel from "react-multi-carousel";
 import {Col, Container, Row } from "react-bootstrap";
 import skill1 from "../assets/img/java-logo-1.png";
 import skill2 from "../assets/img/web-development-svgrepo-com.svg";
@@ -40,27 +41,27 @@ export const Skills = () => {
                             <p></p>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 <div className="item">
-                                    <img src={skill1} alt="Image"/>
+                                    <img src={skill1} alt="java"/>
                                     <h5>Java</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={skill2} alt="Image"/>
+                                    <img src={skill2} alt="WD"/>
                                     <h5>Web Development</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={skill3} alt="Image"/>
+                                    <img src={skill3} alt="SE"/>
                                     <h5>Software Engineer</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={skill4} alt="Image"/>
+                                    <img src={skill4} alt="HTML5"/>
                                     <h5>Html5</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={skill5} alt="Image"/>
-                                    <h5>CSS</h5>
+                                    <img src={skill5} alt="CSS3"/>
+                                    <h5>CSS3</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={skill6} alt="Image"/>
+                                    <img src={skill6} alt="JS"/>
                                     <h5>Javascript</h5>
                                 </div>
                             </Carousel>
@@ -68,7 +69,6 @@ export const Skills = () => {
                     </Col>
                 </Row>
             </Container>
-            <img className="background-image-left" src={''}/>
         </section>
     )
 }
