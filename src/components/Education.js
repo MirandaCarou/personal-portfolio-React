@@ -1,9 +1,15 @@
 import React from "react";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { EducationCard } from "./EducationCard";
+import { CourseCard } from "./CourseCard";
+import { WorkCard } from "./WorkCard";
 import colorSharp2 from "../assets/img/color-sharp.png";
 import TrackVisibility from 'react-on-screen';
-import img from "../assets/img/pillars-of-creation-21-256x256.jpg";
+import img from "../assets/img/graduados.jpeg";
+import img2 from "../assets/img/160412-classroom-stock.jpg";
+import img3 from "../assets/img/matlab.png";
+import img4 from "../assets/img/printer-4348148_960_720.jpg";
+import img5 from "../assets/img/Logotipo_Universidade_de_Vigo.jpg";
 
 export const Education = () => {
     const education = [
@@ -15,9 +21,28 @@ export const Education = () => {
         {
           title: 'I.E.S Praia Barraña',
           description: 'High School Diploma in Science',
-          imgUrl: img
+          imgUrl: img2
         }
       ];
+    const courses = [
+        {
+          title: 'University of Vigo / MathWorks',
+          description: 'Machine Learning Onramp [ 16 Dec 2021 – 16 Dec 2021 ]',
+          imgUrl: img3
+        },
+        {
+          title: 'University of Vigo',
+          description: 'Educational robotics, 3D printing and e-textiles [ 1 Oct 2020 – 1 Nov 2020 ]',
+          imgUrl: img4
+        }
+    ];
+    const work = [
+        {
+          title: 'Intern at University of Vigo',
+          description: 'Maintenance, updating and proper functioning of the IT systems - [ Oct 2022–Jan 2023 ]',
+          imgUrl: img5
+        },
+    ];
     return (
         <section className="project" id="project">
           <Container>
@@ -41,6 +66,7 @@ export const Education = () => {
                       </Nav>
                       <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                         <Tab.Pane eventKey="first">
+                          <p>My Diploma´s along my life</p>
                           <Row>
                             {
                               education.map((educations, index) => {
@@ -55,10 +81,35 @@ export const Education = () => {
                           </Row>
                         </Tab.Pane>
                         <Tab.Pane eventKey="second">
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                        <p>Courses I have attended to improve my skills</p>
+                        <Row>
+                            {
+                              courses.map((course, index) => {
+                                return (
+                                  <CourseCard
+                                    key={index}
+                                    {...course}
+                                    />
+                                )
+                              })
+                            }
+                          </Row>
+                          
                         </Tab.Pane>
                         <Tab.Pane eventKey="third">
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                          <p>My work expierence in the Computer Science filed</p>
+                          <Row>
+                            {
+                              work.map((works, index) => {
+                                return (
+                                  <WorkCard
+                                    key={index}
+                                    {...works}
+                                    />
+                                )
+                              })
+                            }
+                          </Row>
                         </Tab.Pane>
                       </Tab.Content>
                     </Tab.Container>
