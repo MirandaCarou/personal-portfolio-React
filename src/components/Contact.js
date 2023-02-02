@@ -27,7 +27,7 @@ export const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setButtomText('Sending...');
-        let response = await fetch("http://localhost:3000/contact",{
+        let response = await fetch('/contact',{
             method:"POST",
             header:{
                 "Content-Type": "Application/json;charset=utf-8",
@@ -47,6 +47,7 @@ export const Contact = () => {
     return (
         <section className="contact" id="connect">
             <Container>
+                <p>That´s not funcional yet</p>
                 <Row className="align-items-center">
                     <Col size={12} md={6}>
                         <TrackVisibility>
@@ -81,7 +82,7 @@ export const Contact = () => {
                                 {
                                     status.message &&
                                     <Col>
-                                        <p className={status.success == false ? "danger" : "success"}>{status.message}</p>
+                                        <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
                                     </Col>
                                 }
                             </Row>
