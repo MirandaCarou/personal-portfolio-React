@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Col, Container,Row} from "react-bootstrap";
 import TrackVisibility from 'react-visibility-sensor';
 import ContactImg from '../assets/img/ADyLJktFEf-mg0028.jpg'
+import "animate.css";
 
 export const Contact = () => {
     const formInitialDetails = {
@@ -26,7 +27,7 @@ export const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setButtomText('Sending...');
-        let response = await fetch("http://localhost:5000/contact",{
+        let response = await fetch("http://localhost:3000/contact",{
             method:"POST",
             header:{
                 "Content-Type": "Application/json;charset=utf-8",
@@ -65,7 +66,7 @@ export const Contact = () => {
                                     <input type="text" value={formDetails.firstName} placeholder="First Name" onChangeCapture={(e) => onFormUpdate('firstName', e.target.value)}/>
                                 </Col>
                                 <Col sm={6} className="px-1">
-                                    <input type="text" value={formDetails.lastName} placeholder="Last Name" onChangeCapture={(e) => onFormUpdate('lasttName', e.target.value)}/>
+                                    <input type="text" value={formDetails.lastName} placeholder="Last Name" onChangeCapture={(e) => onFormUpdate('lastName', e.target.value)}/>
                                 </Col>
                                 <Col sm={6} className="px-1">
                                     <input type="email" value={formDetails.email} placeholder="Email" onChangeCapture={(e) => onFormUpdate('email', e.target.value)}/>

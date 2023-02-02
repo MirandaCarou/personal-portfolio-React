@@ -81,6 +81,7 @@ h1, h2, h3, h4, h5, h6{
   }
 }
 /************* NavBar CSS *******************/
+
 nav.navbar {  /*Put fixed the navbar and with a high z-index to see it always */
   padding: 18px 0;
   position: fixed;
@@ -114,6 +115,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
 span.navbar-text {
     display: flex;
     align-items: center;
+    color:#fff;
 }
 .social-icon {
     display: inline-block;
@@ -149,10 +151,12 @@ span.navbar-text {
 	z-index: 1;
 	transition: 0.3s ease-in-out;
 }
-
+.navbar-text .vvd{
+  color:#fff;
+}
 .navbar-text button {
   font-weight: 700;
-  color: #fff;
+  color: #fff !important;
   border: 1px solid #fff;
   padding: 18px 34px;
   font-size: 18px;
@@ -161,10 +165,15 @@ span.navbar-text {
 	background-color: transparent;
 	transition: 0.3s ease-in-out;
 }
-.navbar-text button span {
+.navbar-text button span{
+  color: #fff;
+}
+.navbar-text button .vvd {
   z-index: 1;
+  color: #fff;
 }
 .navbar-text button::before {
+  color:white;
   content: "";
   width: 0%;
   height: 100%;
@@ -175,8 +184,9 @@ span.navbar-text {
   z-index: -1;
   transition: 0.3s ease-in-out;
 }
-.navbar-text button:hover {
-  color: #121212;
+
+.navbar-text button:hover span {
+  color: #121212 !important;
 }
 .navbar-text button:hover::before {
 	content: "";
@@ -607,4 +617,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .contact form button:hover::before {
   width: 100%;
+}
+/* Footer CSS */
+.footer {
+  padding: 30px 10px 50px 0;
+  background-image: url('./assets/img/color-sharp.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.footer img {
+  width: 26%;
+  border-radius: 200px;
+}
+.footer p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #B8B8B8;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
 }
